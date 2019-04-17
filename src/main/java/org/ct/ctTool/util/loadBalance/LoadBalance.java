@@ -32,13 +32,9 @@ public abstract class LoadBalance {
         nodes.remove(node);
     }
 
-    private static int index = 0;
 
-    public synchronized static int nextInt(int size){
-        int result = index % size;
-        index++;
-        return result;
-    }
+
+
 
 
 

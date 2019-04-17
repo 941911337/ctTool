@@ -20,6 +20,9 @@ public class Node {
 
     private Integer weight;
 
+    private Object data;
+
+
     public Integer getId() {
         return id;
     }
@@ -60,7 +63,15 @@ public class Node {
         this.weight = weight;
     }
 
-    public Node(Integer id, String name, Long connectCount, Long maxConnectCount,Integer weight) {
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public Node(Integer id, String name, Long connectCount, Long maxConnectCount, Integer weight) {
         this.id = id;
         this.name = name;
         this.connectCount = connectCount;

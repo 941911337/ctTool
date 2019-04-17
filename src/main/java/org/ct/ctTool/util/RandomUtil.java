@@ -48,7 +48,7 @@ public abstract class RandomUtil {
         return result;
     }
 
-    static class CTRandom{
+    public static class CTRandom{
         private int size;
 
         private int[]  randomArray;
