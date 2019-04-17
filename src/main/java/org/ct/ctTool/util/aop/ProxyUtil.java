@@ -1,6 +1,5 @@
 package org.ct.ctTool.util.aop;
 
-import org.ct.ctTool.exception.ParamException;
 import org.ct.ctTool.interfaces.Aspect;
 import org.ct.ctTool.util.BeanUtil;
 import org.ct.ctTool.util.ParamUtil;
