@@ -16,7 +16,7 @@ public abstract class DataUtil {
     /**
      * 判断是否为空
      * @param pObj
-     * @return
+     * @return 标识
      */
     public static final  boolean isEmpty(Object pObj) {
         if (pObj == null || "".equals(pObj)){
@@ -37,6 +37,21 @@ public abstract class DataUtil {
         }
         return false;
     }
+
+    /**
+     * 判断是否为空
+     * @param args
+     * @return 标识
+     */
+    public static final  boolean isEmpty(Object ... args) {
+        for (Object arg : args) {
+            if(isEmpty(arg)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * 私有化构造

@@ -2,7 +2,9 @@ package org.ct.ctTool.util;
 
 import org.ct.ctTool.exception.ParamException;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * @author yzw
@@ -69,6 +71,8 @@ public abstract class RandomUtil {
         }
 
     }
+
+
 
 
 }
