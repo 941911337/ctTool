@@ -70,5 +70,10 @@ public class Constants {
      */
     public static final String DEFAULT_THREAD_NAME = "global";
 
+    /**
+     * 索引名称最大长度
+     */
+    public final static int INDEX_MAX_LENGTH = 30;
+
     private Constants() { }
 }
