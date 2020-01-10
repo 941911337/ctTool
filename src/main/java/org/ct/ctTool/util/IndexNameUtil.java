@@ -1,6 +1,5 @@
 package org.ct.ctTool.util;
 
-import com.alibaba.fastjson.JSON;
 import org.ct.ctTool.domain.index.IndexChain;
 import org.ct.ctTool.exception.OperationException;
 import org.ct.ctTool.function.ChainFunction;
@@ -19,26 +18,26 @@ import java.util.List;
 public abstract class IndexNameUtil {
 
     private static final ChainFunction strategyA = (Object object)->{
-        List<String> list = JSON.parseArray(JSON.toJSONString(object),String.class);
+        List<String> list = (List<String>) object;
         StringBuilder index = new StringBuilder("IDX");
         list.forEach(it ->index.append("_").append(it.toUpperCase()));
         String idx =  index.toString();
         return idx;};
     private static final ChainFunction strategyB = (Object object)->{
-        List<String> list = JSON.parseArray(JSON.toJSONString(object),String.class);
+        List<String> list = (List<String>) object;
         StringBuilder index = new StringBuilder("IDX");
         list.forEach(it ->index.append("_").append(it.substring(0,1).toUpperCase()));
         String idx =  index.toString();
         return idx;};
     private static final ChainFunction strategyC = (Object object)->{
-        List<String> list = JSON.parseArray(JSON.toJSONString(object),String.class);
+        List<String> list = (List<String>) object;
         StringBuilder index = new StringBuilder("IDX");
         list.forEach(it ->index.append(it.substring(0,1).toUpperCase()));
         String idx =  index.toString();
         return idx;
     };
     private static final ChainFunction strategyD = (Object object)->{
-        List<String> list = JSON.parseArray(JSON.toJSONString(object),String.class);
+        List<String> list = (List<String>) object;
         StringBuilder index = new StringBuilder("IDX");
         list.forEach(it ->index.append(it.substring(0,1).toUpperCase()));
         String idx =  index.toString();
@@ -72,8 +71,6 @@ public abstract class IndexNameUtil {
             //当前节点不是首节点
             if (pre != null){
                 pre.setNext(last);
-            }else{
-
             }
             last = pre;
             result = last;
@@ -93,4 +90,6 @@ public abstract class IndexNameUtil {
 
     public IndexNameUtil() {
     }
+
+
 }

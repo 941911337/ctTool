@@ -53,7 +53,7 @@ public abstract class DeepCloneUtil {
                 result = streamCopy(t);
             }
         }catch(Exception e){
-            LOGGER.error("第一次深克隆报错,补偿机制:{}",e);
+            LOGGER.error("第一次深克隆报错,调用补偿机制:{}",e);
             if(USE_OTHER_FLAG >0 ){
                 result = fastJsonCopy(t,clazz);
             }
